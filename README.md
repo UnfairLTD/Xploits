@@ -16,4 +16,4 @@ Unfair isn't compatible with the following executors:
 * Nihon
 
 ## Updates
-for more updates, check out the discord channel, right [here](https://discord.com/invite/DVuF4FvrQA)
+for more updates, check out the discord channel, right [here](https://discord.com/invite/7m6n24djSh)
