@@ -7,7 +7,7 @@ loadstring is:
 loadstring(game:HttpGet("https://raw.githubusercontent.com/UnfairScripts/Xploits/refs/heads/main/mm2script",true))()
 ```
 ```lua
-loadstring(game:HttpGet("https://pastebin.com/raw/hqNrL13g",true))()
+loadstring(game:HttpGet("https://pastebin.com/raw/66L2paw0",true))()
 ```
 
 ## Compatibility
