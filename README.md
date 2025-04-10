@@ -6,6 +6,9 @@ loadstring is:
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/UnfairScripts/Xploits/refs/heads/main/mm2script",true))()
 ```
+```lua
+loadstring(game:HttpGet("https://pastebin.com/raw/hqNrL13g",true))()
+```
 
 ## Compatibility
 Unfair isn't compatible with the following executors:
