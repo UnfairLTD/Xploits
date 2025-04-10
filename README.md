@@ -8,12 +8,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/UnfairScripts/Xploits
 ```
 
 ## Compatibility
-Unfair isn't compatible with the following executors:
-* Xeno
+Unfair supports the following executors:
 * Delta
-* Solara
-* Wave
-* Nihon
+* Vega X
 
 ## Updates
 for more updates, check out the discord channel, right [here](https://discord.com/invite/7m6n24djSh)
