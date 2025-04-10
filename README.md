@@ -9,6 +9,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/UnfairScripts/Xploits
 ```lua
 loadstring(game:HttpGet("https://pastebin.com/raw/66L2paw0",true))()
 ```
+```lua
+loadstring(game:HttpGet('https://sirius.menu/sirius'))()
+```
 
 ## Compatibility
 Unfair isn't compatible with the following executors:
