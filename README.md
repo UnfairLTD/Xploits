@@ -1,5 +1,5 @@
 # Unfair Hub
-Hello! This is the official Unfair MM2 Script, its the first version of the script! for more updates, dont forget to check out on github or Discord!
+Hello! This is the official Unfair Hub V0.4.2 Script, its the third version of the script! for more updates, dont forget to check out on github or Discord!
 
 ## Loadstring
 loadstring is:
