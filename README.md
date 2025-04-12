@@ -4,7 +4,7 @@ Hello! This is the official Unfair Hub V0.4.2 Script, its the third version of t
 ## Loadstring
 loadstring is:
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/UnfairScripts/Xploits/refs/heads/main/mm2script",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/UnfairScripts/Xploits/refs/heads/main/mm2script.lua",true))()
 ```
 ```lua
 loadstring(game:HttpGet("https://pastebin.com/raw/A7vxBLsi",true))()
