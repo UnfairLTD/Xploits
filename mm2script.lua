@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
-local Window = OrionLib:MakeWindow({Name = "Unfair Hub V0.4.3 | MM2", IntroText = "Murder Mystery 2", HidePremium = false, SaveConfig = false})
+local Window = OrionLib:MakeWindow({Name = "Unfair Hub V0.4.3 | MM2, HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
 
 OrionLib:MakeNotification({
     Name = "Executed",
