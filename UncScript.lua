@@ -174,7 +174,7 @@ end)
 
 -- ESP Toggle
 Window:MakeTab({
-    Name = "ESP",
+    Name = "Script",
     Icon = "rbxassetid://6039813346",
     PremiumOnly = false
 })
