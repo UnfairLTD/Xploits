@@ -6,7 +6,7 @@ local username = LocalPlayer.Name
 
 -- Create the UI Window
 local Window = Rayfield:CreateWindow({
-   Name = "Unfair Hub V0.4.4 | Murder Mystery 2",
+   Name = "Unfair Hub V0.4.5 | Murder Mystery 2",
    Icon = 0,
    LoadingTitle = "Rayfield Interface Suite",
    LoadingSubtitle = "by Sirius",
