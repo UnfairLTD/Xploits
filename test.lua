@@ -56,7 +56,7 @@ if game.PlaceId == 142823291 then
        Title = "Executed",
        Content = "Discord Copied Into Clipboard, Check out Our Discord",
        Duration = 3,
-       Image = "rbxassetid://607866917" -- Green checkmark
+       Image = 607866917 -- Green checkmark
    })
 
    playDingSound()
