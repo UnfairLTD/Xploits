@@ -1,11 +1,15 @@
 if game.PlaceId == 142823291 then
    local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
+   local Players = game:GetService("Players")
+   local LocalPlayer = Players.LocalPlayer
+   local username = LocalPlayer.Name
+
    local Window = Rayfield:CreateWindow({
-       Name = "Unfair Hub V0.4.4 | Murder Mystery 2",
+       Name = "Unfair Hub V1.1 | Murder Mystery 2",
        Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-       LoadingTitle = "Rayfield Interface Suite",
-       LoadingSubtitle = "by Sirius",
+       LoadingTitle = "Loading..",
+       LoadingSubtitle = "Pls wait.",
        Theme = "Default",
 
        DisableRayfieldPrompts = false,
@@ -52,11 +56,15 @@ if game.PlaceId == 142823291 then
        Title = "Executed",
        Content = "Discord Copied Into Clipboard, Check out Our Discord",
        Duration = 3,
-       Image = 3926305904
+       Image = "rbxassetid://607866917" -- Icon for the notification
    })
 
    playDingSound()
 
-   -- Example tab
-   local MainTab = Window:CreateTab("Tab Example", 4483362458) -- Title, Image
+   -- Create the "Player Info" Tab
+   local MainTab = Window:CreateTab("Player Info", 4483362458)
+
+   -- Create a label in the "Player Info" Tab to display the player's username
+   MainTab:CreateLabel("Username: " .. username)
+
 end
