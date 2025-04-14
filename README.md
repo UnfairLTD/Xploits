@@ -1,5 +1,5 @@
 # Unfair Hub
-Hello! This is the official Unfair Hub V1 Script, its the third version of the script! for more updates, dont forget to check out on github or Discord!
+Hello! This is the official Unfair Hub V1.1 Script, its the second version of the script! for more updates, dont forget to check out on github or Discord!
 
 ## Loadstring
 
