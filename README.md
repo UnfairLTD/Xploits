@@ -1,14 +1,9 @@
 # Unfair Hub
-Hello! This is the official Unfair Hub V0.4.2 Script, its the third version of the script! for more updates, dont forget to check out on github or Discord!
+Hello! This is the official Unfair Hub V1 Script, its the third version of the script! for more updates, dont forget to check out on github or Discord!
 
 ## Loadstring
-loadstring is:
-```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/UnfairScripts/Xploits/refs/heads/main/mm2script.lua",true))()
-```
-```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/UnfairScripts/Xploits/refs/heads/main/Script.lua",true))()
-```
+
+Sadly Our Script has too much errors please stay tuned :(
 
 ## Compatibility
 Unfair supports the following executors:
