@@ -69,8 +69,8 @@ end
 
 local requestsDisabled = true --getgenv and getgenv().DISABLE_RAYFIELD_REQUESTS
 local InterfaceBuild = '3K3W'
-local Release = "Build 1.672"
-local RayfieldFolder = "Rayfield"
+local Release = "Build V0.1"
+local RayfieldFolder = "Cr: Sirius"
 local ConfigurationFolder = RayfieldFolder.."/Configurations"
 local ConfigurationExtension = ".rfld"
 local settingsTable = {
