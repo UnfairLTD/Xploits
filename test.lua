@@ -6,10 +6,10 @@ if game.PlaceId == 142823291 then
    local username = LocalPlayer.Name
 
    local Window = Rayfield:CreateWindow({
-       Name = "Unfair Hub V1.1 | Murder Mystery 2",
-       Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-       LoadingTitle = "Loading..",
-       LoadingSubtitle = "Pls wait.",
+       Name = "Unfair Hub V0.4.4 | Murder Mystery 2",
+       Icon = 0,
+       LoadingTitle = "Rayfield Interface Suite",
+       LoadingSubtitle = "by Sirius",
        Theme = "Default",
 
        DisableRayfieldPrompts = false,
@@ -39,8 +39,6 @@ if game.PlaceId == 142823291 then
        }
    })
 
-   setclipboard("https://discord.com/invite/7m6n24djSh")
-
    -- Play the "ding" sound
    local function playDingSound()
        local Sound = Instance.new("Sound")
@@ -52,11 +50,12 @@ if game.PlaceId == 142823291 then
    end
 
    -- Show a notification and play the sound
+   print("Attempting to show notification...")  -- Debug line
    Rayfield:Notify({
        Title = "Executed",
        Content = "Discord Copied Into Clipboard, Check out Our Discord",
        Duration = 3,
-       Image = "rbxassetid://607866917" -- Icon for the notification
+       Image = "rbxassetid://607866917" -- Green checkmark
    })
 
    playDingSound()
@@ -67,4 +66,6 @@ if game.PlaceId == 142823291 then
    -- Create a label in the "Player Info" Tab to display the player's username
    MainTab:CreateLabel("Username: " .. username)
 
+   print("Notification should have been shown.")  -- Debug line
+   
 end
