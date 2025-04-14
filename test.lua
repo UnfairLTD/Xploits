@@ -6,7 +6,7 @@ if game.PlaceId == 142823291 then
    local username = LocalPlayer.Name
 
    local Window = Rayfield:CreateWindow({
-       Name = "Unfair Hub V0.4.41 | Murder Mystery 2",
+       Name = "Unfair Hub V0.4.42 | Murder Mystery 2",
        Icon = 0,
        LoadingTitle = "Rayfield Interface Suite",
        LoadingSubtitle = "by Sirius",
