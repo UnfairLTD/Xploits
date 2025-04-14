@@ -7,8 +7,7 @@ Sadly Our Script has too much errors please stay tuned :(
 
 ## Compatibility
 Unfair supports the following executors:
-* Delta
-* Vega X
+*Still Updating
 
 ## Updates
 for more updates, check out the discord channel, right [here](https://discord.com/invite/7m6n24djSh)
