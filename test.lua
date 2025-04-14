@@ -1,65 +1,62 @@
 if game.PlaceId == 142823291 then
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
-local username = LocalPlayer.Name
+   local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
--- Create the UI Window
-local Window = Rayfield:CreateWindow({
-   Name = "Unfair Hub V0.4.5 | Murder Mystery 2",
-   Icon = 0,
-   LoadingTitle = "Rayfield Interface Suite",
-   LoadingSubtitle = "by Sirius",
-   Theme = "Default",
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil,
-      FileName = "Big Hub"
-   }
-})
+   local Window = Rayfield:CreateWindow({
+       Name = "Unfair Hub V0.4.4 | Murder Mystery 2",
+       Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+       LoadingTitle = "Rayfield Interface Suite",
+       LoadingSubtitle = "by Sirius",
+       Theme = "Default",
 
--- Copy Discord invite to clipboard
-setclipboard("https://discord.com/invite/7m6n24djSh")
+       DisableRayfieldPrompts = false,
+       DisableBuildWarnings = false,
 
--- Play a ding sound
-local function playDingSound()
-    local Sound = Instance.new("Sound")
-    Sound.SoundId = "rbxassetid://9068539820"
-    Sound.Volume = 1
-    Sound.PlayOnRemove = true
-    Sound.Parent = game:GetService("SoundService")
-    Sound:Destroy()
-end
+       ConfigurationSaving = {
+           Enabled = true,
+           FolderName = nil,
+           FileName = "Big Hub"
+       },
 
--- Notify user of execution
-Window:Notify({
-    Title = "Executed",
-    Content = "Discord Copied Into Clipboard, Check out Our Discord",
-    Duration = 3,
-    Image = 7733658504 -- Small green checkmark
-})
+       Discord = {
+           Enabled = false,
+           Invite = "noinvitelink",
+           RememberJoins = true
+       },
 
-playDingSound()
+       KeySystem = false,
+       KeySettings = {
+           Title = "Untitled",
+           Subtitle = "Key System",
+           Note = "No method of obtaining the key is provided",
+           FileName = "Key",
+           SaveKey = true,
+           GrabKeyFromSite = false,
+           Key = {"Hello"}
+       }
+   })
 
--- Main Tab with player info
-local MainTab = Window:CreateTab("Player Info", 4483362458)
+   setclipboard("https://discord.com/invite/7m6n24djSh")
 
--- Empty line for Rayfield to initialize properly
-wait(0.1)
+   -- Play the "ding" sound
+   local function playDingSound()
+       local Sound = Instance.new("Sound")
+       Sound.SoundId = "rbxassetid://9068539820"
+       Sound.Volume = 1
+       Sound.Parent = game:GetService("SoundService")
+       Sound:Play()
+       game:GetService("Debris"):AddItem(Sound, 2)
+   end
 
-MainTab:CreateLabel("Logged in as: " .. username)
-local statusLabel = MainTab:CreateLabel("Status: Checking...")
+   -- Show a notification and play the sound
+   Rayfield:Notify({
+       Title = "Executed",
+       Content = "Discord Copied Into Clipboard, Check out Our Discord",
+       Duration = 3,
+       Image = 3926305904
+   })
 
--- Check Roblox Premium
-local function checkPremium()
-    if LocalPlayer.MembershipType == Enum.MembershipType.Premium then
-        statusLabel:Set("Status: Premium")
-        -- You can add any additional premium functionality here
-    else
-        statusLabel:Set("Status: None")
-    end
-end
+   playDingSound()
 
-checkPremium()
-
+   -- Example tab
+   local MainTab = Window:CreateTab("Tab Example", 4483362458) -- Title, Image
 end
