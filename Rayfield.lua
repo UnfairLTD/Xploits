@@ -68,7 +68,7 @@ local function loadWithTimeout(url: string, timeout: number?): ...any
 end
 
 local requestsDisabled = true --getgenv and getgenv().DISABLE_RAYFIELD_REQUESTS
-local InterfaceBuild = '3K3W'
+local InterfaceBuild = 'BV1'
 local Release = "Newest Version"
 local RayfieldFolder = "Cr: Sirius"
 local ConfigurationFolder = RayfieldFolder.."/Configurations"
@@ -76,7 +76,7 @@ local ConfigurationExtension = ".rfld"
 local settingsTable = {
 	General = {
 		-- if needs be in order just make getSetting(name)
-		rayfieldOpen = {Type = 'bind', Value = 'K', Name = 'Rayfield Keybind'},
+		rayfieldOpen = {Type = 'bind', Value = 'TAB', Name = 'Rayfield Keybind'},
 		-- buildwarnings
 		-- rayfieldprompts
 
