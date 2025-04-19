@@ -3,7 +3,10 @@ Hello! This is the official Unfair Hub V1.1 Script, its the second version of th
 
 ## Loadstring
 
-Sadly Our Script has too much errors please stay tuned :(
+```lua
+loadstring(game:HttpGet('https://raw.githubusercontent.com/UnfairScripts/Xploits/refs/heads/main/PREVIEW.lua'))()
+```
+its a pre-view so the script wont work, only few
 
 ## Compatibility
 Unfair supports the following executors:
