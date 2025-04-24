@@ -1,5 +1,0 @@
-getgenv().AntiAFK = true  -- Prevent automatic kicking for being idle
-getgenv().NoClipDetection = true  -- Prevent detection while in noclip
-getgenv().SecureMode = true  -- Enable a mode to bypass detection methods
-getgenv().NoCheat = true  -- Toggle basic anti-cheat bypass protections
-getgenv().AntiKick = true  -- Block any kick attempts (useful for client bypass)
