@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lua Monaco Editor</title>
+  <style>
+    html, body, #container {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+
+  <!-- Load Monaco Editor -->
+  <script src="monaco/min/vs/loader.js"></script>
+  <script>
+    require.config({ paths: { 'vs': 'monaco/min/vs' } });
+
+    require(['vs/editor/editor.main'], function () {
+      // Create the editor
+      const editor = monaco.editor.create(document.getElementById('container'), {
+        value: `-- Lua Example
+if true then
+  print("Hello World")
+end`,
+        language: 'lua',
+        theme: 'vs-dark',
+        automaticLayout: true
+      });
+
+      // Add basic completions for Lua (manual custom completion)
+      monaco.languages.registerCompletionItemProvider('lua', {
+        provideCompletionItems: () => {
+          const suggestions = [
+            {
+              label: 'print',
+              kind: monaco.languages.CompletionItemKind.Function,
+              insertText: 'print(${1:message})',
+              insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet,
+              documentation: 'Outputs text to the console'
+            },
+            {
+              label: 'if',
+              kind: monaco.languages.CompletionItemKind.Keyword,
+              insertText: 'if ${1:condition} then\n\t$0\nend',
+              insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet,
+              documentation: 'Lua conditional statement'
+            },
+            {
+              label: 'function',
+              kind: monaco.languages.CompletionItemKind.Keyword,
+              insertText: 'function ${1:name}(${2:params})\n\t$0\nend',
+              insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet,
+              documentation: 'Lua function definition'
+            }
+          ];
+          return { suggestions: suggestions };
+        }
+      });
+    });
+  </script>
+</body>
+</html>
