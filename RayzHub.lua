@@ -2,7 +2,9 @@
 
       Supports = ps99 / psgo
 
-      Creator is : Rayz (drxpzw)
+      Official Creator : Rayz (drxpzw)  <---- Join Discord Server
+
+      Used By : Unfair (Unfairrblx)  <---- Join Discord Server
 
       Script Might not work for some executors!
 
