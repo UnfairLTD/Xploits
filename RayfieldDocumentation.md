@@ -198,11 +198,6 @@ local Paragraph = Tab:CreateParagraph({Title = "Paragraph Example", Content = "P
 
 ## Advanced paragraph (Rayfield)
 ```lua
-local Paragraph = Tab:CreateParagraph({Title = "Paragraph Example", Content = "Paragraph Example"})
-```
-
-## Destroying the Interface
-```lua
 Tab:Paragraph({
     Title = "Paragraph Name",
 Put in you're Content it can be
@@ -211,6 +206,11 @@ really long
 
         ]]
     })
+```
+
+## Destroying the Interface
+```lua
+Rayfield:Destroy()
 ```
 
 _________________________________________________________________________________________________________________________-
