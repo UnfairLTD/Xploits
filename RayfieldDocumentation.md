@@ -1,5 +1,5 @@
 # Version
-Newest Version : : Build 1.672
+Newest Version :  Build 1.672
 
 # Rayfield Libary
 this libary belongs to Sirius and shlex!
