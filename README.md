@@ -5,7 +5,6 @@ Hello! This is the official Unfair Hub V0.1 Script, its the first version of thi
 
 Oops it looks like the script isn't updated yet come back another time!
 
-its a pre-view so the script wont work, only few
 
 ## Compatibility
 Unfair supports the following executors:
