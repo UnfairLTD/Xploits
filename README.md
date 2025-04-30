@@ -7,8 +7,11 @@ Oops it looks like the script isn't updated yet come back another time!
 
 
 ## Compatibility
-Unfair supports the following executors:
-* Still Updating
+Unsupported Executors:
+* Nezur
+* JJSploit
+* Solara
+* AWP
 
 ## Updates
 for more updates, check out the discord channel, right [here](https://discord.com/invite/7m6n24djSh)
