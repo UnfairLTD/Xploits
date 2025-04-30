@@ -196,9 +196,21 @@ local Label = Tab:CreateLabel("Label Example", "rewind")
 local Paragraph = Tab:CreateParagraph({Title = "Paragraph Example", Content = "Paragraph Example"})
 ```
 
+## Advanced paragraph (Rayfield)
+```lua
+local Paragraph = Tab:CreateParagraph({Title = "Paragraph Example", Content = "Paragraph Example"})
+```
+
 ## Destroying the Interface
 ```lua
-Rayfield:Destroy()
+Tab:Paragraph({
+    Title = "Paragraph Name",
+Put in you're Content it can be
+really long
+   really usefull
+
+        ]]
+    })
 ```
 
 _________________________________________________________________________________________________________________________-
