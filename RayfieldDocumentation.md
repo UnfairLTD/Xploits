@@ -1,4 +1,4 @@
-![Thread](https://user-images.githubusercontent.com/77512805/164973978-31f19af4-528a-4af0-9ba8-21bc22e668ef.png)
+![Thread](https://repository-images.githubusercontent.com/523426687/680b284b-8dde-42a2-a26f-fa0a2c83acf8)
 
 # Why choose Rayfield?
 ⚖️ Reliable and Stable
