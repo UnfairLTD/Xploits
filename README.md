@@ -4,8 +4,8 @@ Hello! This is the official Unfair Hub V0.1.1 Script, its the first version of t
 ## Loadstring
 ```lua
 if not game:IsLoaded() then repeat task.wait() until game:IsLoaded() end
-local s = game:HttpGet("https://tinyurl.com/UnfairHub"); local f = loadstring(s)
-pcall(f)
+local r, s = pcall(function() return loadstring(game:HttpGet("https://tinyurl.com/UnfairHub")) end)
+if r and type(s) == "function" then pcall(s) else warn("[UnfairHub] Failed to load script.") end
 ```
 
 
