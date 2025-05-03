@@ -7,24 +7,19 @@
 
 ⚙️ Advanced features like
 
-🔑 Key System
-🔗 Discord Auto Joins
-🔔 Notifications
-💃 Excellent perfomance
+  * 🔑 Key System
+  * 🔗 Discord Auto Joins
+  * 🔔 Notifications
+  *💃 Excellent perfomance
 
-#Getting Started
+# Getting Started
 To get started with Rayfield, check out the sidebar at the left. It provides quick links on how to use all of the Rayfield features for your own project. Keep this documentation around so that you can always refer back to it as you build.
 
 Found a missing feature that you can't live without? Please suggest it on Discord (#forum channel) and even consider adding it yourself on GitHub! Rayfield is an open source project and contributions from developers like you are more than welcome!
 
 
-
-
-# Version
-Newest Version :  Build 1.672
-
 # Rayfield Libary
-this libary belongs to Sirius and shlex!
+this libary belongs to Sirius!
 
 ## Booting the Rayfield Library
 ```lua
