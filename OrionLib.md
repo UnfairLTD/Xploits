@@ -1,5 +1,5 @@
 # Orion Library
-This documentation is for the stable release of Orion Library.
+This documentation may be outdated please use Rayfield or any other Libary.
 
 ## Booting the Library
 ```lua
