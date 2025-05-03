@@ -5,7 +5,7 @@
 
 🔓 Open Sourced
 
-# ⚙️ Advanced features like
+⚙️ Advanced features like
 
 🔑 Key System
 🔗 Discord Auto Joins
