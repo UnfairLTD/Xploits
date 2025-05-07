@@ -11,11 +11,8 @@ if r and type(s) == "function" then pcall(s) else game:GetService("StarterGui"):
 
 
 ## Compatibility
-Unsupported Executors:
-* Nezur
-* JJSploit
-* Solara
-* AWP
+
+It depends on, wich things your Executor supports.
 
 ## Updates
 we update very often, but still check out the our [Discord](https://discord.com/invite/7m6n24djSh).
