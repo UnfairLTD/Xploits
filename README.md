@@ -18,4 +18,5 @@ Unsupported Executors:
 * AWP
 
 ## Updates
-for more updates, check out the discord channel, right [here](https://discord.com/invite/7m6n24djSh)
+we update very often, but still check out the our [Discord](https://discord.com/invite/7m6n24djSh).
+
