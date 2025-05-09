@@ -1,9 +1,11 @@
+
+
 # Unfair Hub
-Hello! This is the official Unfair Hub V0.1 Script, its the first version of this script. for more updates, dont forget to check out on github or Discord!
-
-
+This is the first version : 0.1
 
 ![Thread](https://i.postimg.cc/7hg1h4WY/Screenshot-2025-05-09-145543.png)
+
+
 
 ## Loadstring
 ```lua
