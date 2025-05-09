@@ -3,7 +3,7 @@ Hello! This is the official Unfair Hub V0.1 Script, its the first version of thi
 
 
 
-![Thread](https://imgur.com/WtaNjPG)
+![Thread](https://postimg.cc/v4M6xxgP)
 
 ## Loadstring
 ```lua
