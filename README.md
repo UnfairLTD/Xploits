@@ -3,8 +3,6 @@
 # Unfair Hub
 This is the first version : 0.1
 
-![Thread](https://i.postimg.cc/QCsmpV5W/Screenshot-2025-05-09-151522-1-1.png)
-
 
 
 ## Loadstring
