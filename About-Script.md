@@ -10,7 +10,7 @@
 * 🧑Player Tab
 * 🌐Universal Scripts
 * 📃Custom Scripts
-* ⭐Premium Edition (coming out soon)
+* ⭐Premium Edition (FREE EARLY ACCESS)
 
 # Works for?
 
