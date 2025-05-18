@@ -1,0 +1,187 @@
+print("=== UNC Test ===")
+
+local totalTests, supported = 0, 0
+
+local function safeTest(name, func)
+    totalTests = totalTests + 1
+    local supportedThis = false
+    local emoji = "❌"
+
+    if type(func) == "function" then
+        local ok, _ = pcall(func)
+        if ok then
+            emoji = "✅"
+            supported = supported + 1
+            supportedThis = true
+        end
+    end
+
+    print(("TEST %02d | %-35s => %s"):format(totalTests, name, emoji))
+    return supportedThis
+end
+
+local tests = {
+    {"identifyexecutor", identifyexecutor},
+    {"getexecutorname", getexecutorname},
+    {"isourclosure", function() return isourclosure and isourclosure(function() end) end},
+    {"isexecutorclosure", function() return isexecutorclosure and isexecutorclosure(function() end) end},
+    {"is_sirhurt_closure", function() return is_sirhurt_closure and is_sirhurt_closure(function() end) end},
+    {"is_synapse_function", function() return is_synapse_function and is_synapse_function(function() end) end},
+
+    {"getgenv", getgenv},
+    {"getrenv", getrenv},
+    {"getfenv", function() return getfenv and getfenv(function() end) end},
+    {"setfenv", function() return setfenv and setfenv(function() end, {}) end},
+    {"getreg", getreg},
+    {"getgc", function() local g=getgc and getgc() return g and g[1] end},
+
+    {"getsenv", function() 
+        if getsenv and game and game.Players and game.Players.LocalPlayer then 
+            return getsenv(game.Players.LocalPlayer) 
+        end 
+    end},
+    {"getmenv", function() return getmenv and getmenv(game) end},
+    {"getcallingscript", function() return getcallingscript and tostring(getcallingscript()) end},
+    {"getscriptclosure", function() return getscriptclosure and getscriptclosure(script) end},
+
+    {"hookfunction", hookfunction and function() return hookfunction(function() end, function() end) end},
+    {"hookmetamethod", hookmetamethod and function() return hookmetamethod(game, "__namecall", function(...) return ... end) end},
+    {"newcclosure", newcclosure},
+    {"islclosure", islclosure},
+    {"iscclosure", iscclosure},
+    {"checkcaller", checkcaller},
+
+    {"getupvalue", function() return getupvalue and getupvalue(function() return 1 end, 1) end},
+    {"setupvalue", function() return setupvalue and setupvalue(function() return 1 end, 1, 2) end},
+    {"getconstants", function() return getconstants and getconstants(function() return "hi" end)[1] end},
+    {"setconstant", function() return setconstant and setconstant(function() return "hi" end, 1, "yo") end},
+    {"getproto", function() return getproto and getproto(function() end, 1) end},
+    {"setproto", function() return setproto and setproto(function() end, function() end, 1) end},
+
+    {"getrawmetatable", getrawmetatable},
+    {"setreadonly", function() 
+        if setreadonly and getrawmetatable then
+            local mt = getrawmetatable(game)
+            setreadonly(mt, false)
+            setreadonly(mt, true)
+            return true
+        end
+    end},
+    {"make_writeable", make_writeable},
+    {"setwriteable", function() 
+        if setwriteable and getrawmetatable then
+            return setwriteable(getrawmetatable(game), true)
+        end
+    end},
+
+    {"mouse1click", mouse1click},
+    {"mouse1press", mouse1press},
+    {"mouse1release", mouse1release},
+    {"mouse2click", mouse2click},
+    {"keypress", function() return keypress and keypress(0x41) end},
+    {"keyrelease", function() return keyrelease and keyrelease(0x41) end},
+
+    {"setclipboard", function() return setclipboard and setclipboard("UNC Test") end},
+    {"toclipboard", function() return toclipboard and toclipboard("UNC Test") end},
+
+    {"queue_on_teleport", function() return queue_on_teleport and queue_on_teleport("print('TP')") end},
+    {"syn.queue_on_teleport", function() return syn and syn.queue_on_teleport and syn.queue_on_teleport("print('TP')") end},
+
+    {"writefile", function() 
+        if writefile then
+            writefile("unc_test.txt", "data")
+            return true
+        end
+    end},
+    {"appendfile", function() 
+        if appendfile then
+            appendfile("unc_test.txt", "more data")
+            return true
+        end
+    end},
+    {"readfile", function() return readfile and readfile("unc_test.txt") end},
+    {"isfile", function() return isfile and isfile("unc_test.txt") end},
+    {"makefolder", function() if makefolder then makefolder("UNC") return true end end},
+    {"isfolder", function() return isfolder and isfolder("UNC") end},
+    {"listfiles", function() local files = listfiles and listfiles("UNC") return files and files[1] end},
+    {"delfile", function() if delfile then delfile("unc_test.txt") return true end end},
+    {"delfolder", function() if delfolder then delfolder("UNC") return true end end},
+
+    {"syn.request", function() return syn and syn.request and syn.request({Url="http://httpbin.org/get", Method="GET"}).StatusCode end},
+    {"http.request", function() return http and http.request and http.request({Url="http://httpbin.org/get", Method="GET"}).StatusCode end},
+    {"request", function() return request and request({Url="http://httpbin.org/get", Method="GET"}).StatusCode end},
+    {"fluxus.request", function() return fluxus and fluxus.request and fluxus.request({Url="http://httpbin.org/get", Method="GET"}).StatusCode end},
+
+    {"Drawing.new", function()
+        if Drawing then
+            local txt = Drawing.new("Text")
+            txt.Text = "Hello"
+            txt.Visible = false
+            txt:Remove()
+            return true
+        end
+    end},
+
+    {"gethui", gethui},
+    {"get_hidden_gui", get_hidden_gui},
+    {"syn.protect_gui", function()
+        if syn and syn.protect_gui then
+            local g = Instance.new("ScreenGui")
+            syn.protect_gui(g)
+            return true
+        end
+    end},
+    {"syn.unprotect_gui", function()
+        if syn and syn.protect_gui and syn.unprotect_gui then
+            local g = Instance.new("ScreenGui")
+            syn.protect_gui(g)
+            syn.unprotect_gui(g)
+            return true
+        end
+    end},
+
+    {"decompile", decompile},
+    {"getconnections", function() return getconnections and getconnections(game.DescendantAdded)[1] end},
+    {"getloadedmodules", function() return getloadedmodules and getloadedmodules()[1] end},
+    {"firetouchinterest", function()
+        if firetouchinterest and game and game.Players and game.Players.LocalPlayer and game.Players.LocalPlayer.Character then
+            local p = Instance.new("Part", workspace)
+            firetouchinterest(p, game.Players.LocalPlayer.Character.HumanoidRootPart, 0)
+            firetouchinterest(p, game.Players.LocalPlayer.Character.HumanoidRootPart, 1)
+            p:Destroy()
+            return true
+        end
+    end},
+    {"firesignal", function()
+        if firesignal then
+            local b = Instance.new("BindableEvent")
+            b.Event:Connect(function() end)
+            firesignal(b.Event)
+            return true
+        end
+    end},
+
+    {"newthreadclosure", function() return newthreadclosure and newthreadclosure(function() end) end},
+    {"cloneref", function() return cloneref and cloneref(game) end},
+    {"newproxy", function() return type(newproxy and newproxy(true)) == "userdata" end},
+    {"loadstring", function() return loadstring and type(loadstring("return 123")()) == "number" end},
+    {"loadfile", function() return loadfile and type(loadfile("unc_test.txt")) == "function" end},
+    {"dofile", function() return dofile and type(dofile("unc_test.txt")) == "function" end},
+    {"debug.getinfo", function() return debug and debug.getinfo and debug.getinfo(function() end) end},
+    {"debug.traceback", function() return debug and debug.traceback and type(debug.traceback()) == "string" end},
+    {"xpcall", function() return xpcall(function() return true end, function() end) end},
+    {"pcall", function() return pcall(function() return true end) end},
+    {"ypcall", function() return ypcall and ypcall(function() return true end) end},
+}
+
+for i, v in ipairs(tests) do
+    safeTest(v[1], v[2])
+end
+
+if totalTests == 0 then
+    print("❗ No tests were performed. Something went wrong.")
+else
+    local percent = math.floor((supported / totalTests) * 100)
+    print("=== Finished Scan ===")
+    print(("[RESULT] %d / %d functions (%d%% supported)"):format(supported, totalTests, percent))
+end
