@@ -4,13 +4,15 @@
 
 # Why use Unfair Hub?
 
+* 🛡️Max Secure
 * 📢Being updated much more often!
 * ➕More Features being added
 * 🔒Undetected Script
 * 🧑Player Tab
 * 🌐Universal Scripts
 * 📃Custom Scripts
-* ⭐Premium Edition (FREE EARLY ACCESS)
+* ⭐Premium Edition (FREE EARLY ACCESS COMING WHEN PREMIUM SCRIPT IS DONE)
+* 🟢Made By the best Ui libary (Rayfield)
 
 # Works for?
 
