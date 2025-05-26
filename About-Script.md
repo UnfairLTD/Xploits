@@ -2,6 +2,8 @@
 
 ![Thread](https://i.postimg.cc/pT5409pG/Screenshot-2025-05-09-151522-1.png)
 
+<hr>
+
 # Why use Unfair Hub?
 
 * 🛡️Max Secure
