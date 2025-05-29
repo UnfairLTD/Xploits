@@ -9,7 +9,7 @@ This is the first version : 0.1b
 ```lua
 getgenv().SecureMode = true
 
-local r, s = pcall(function() return loadstring(game:HttpGet("https://raw.githubusercontent.com/UnfairLTD/Xploits/refs/heads/main/UnfairHub.lua")) end) if r and type(s) == "function" then pcall(s) else game:GetService("StarterGui"):SetCore("SendNotification"{Title="Unfair Hub", Text="Please re-execute the script.", Duration=5}) end
+local Script = loadstring(game:HttpGet("https://raw.githubusercontent.com/UnfairLTD/Xploits/refs/heads/main/UnfairHub.lua"))() if not Script then print("Failed to Load.") end
 ```
 
 
