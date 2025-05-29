@@ -1,6 +1,6 @@
 # NOTE!
 
-Please be aware of using any script because the modified clients ban on roblox may ban your account for 1 day or even 1 year yk
+Please be aware of using any executor or scripts, because the modified clients ban on roblox may ban your account for 1 day or even 1 year yk
 So be aware of using a executor that says our executor is "Bypassing" the modified client ban.
 This Ban affects for most executors.
 
