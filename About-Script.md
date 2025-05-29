@@ -16,6 +16,10 @@
 * ⭐Premium Edition (FREE EARLY ACCESS COMING WHEN PREMIUM SCRIPT IS DONE)
 * 🟢Made By the best Ui libary (Rayfield)
 
+## Games :
+* Murder Mystery 2
+* Grow a garden
+
 # Works for?
 
 * This script supports almost every executor also Level 3
