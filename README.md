@@ -1,7 +1,7 @@
 
 
 # Unfair Hub
-This is the first version : 0.1
+This is the first version : 0.1b
 
 
 
